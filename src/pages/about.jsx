@@ -11,6 +11,8 @@ const About = () => {
         <li>Melissa Gonzalez '25</li>
 
         <p>Peer Supporters</p>
+        <p>Peer support volunteers are Dartmouth undergraduate students who have undergone 50+ hours of training
+          with staff from Student Affairs offices, including the Counseling Center and the Student Wellness Center.</p>
         <li> x</li>
         <li> x</li>
         <li>x</li>

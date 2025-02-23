@@ -6,9 +6,10 @@
     top: 0;
     left: 0;  
     width: 100%;
-    padding: 1rem 2rem;
-    background-color: #222;
+    padding: 0.25rem 2rem;
+    background-color: #25252D;
     color: white;
+    border-bottom: 1px solid #464652;
   }
   
   .logo {

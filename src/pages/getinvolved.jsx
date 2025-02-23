@@ -9,7 +9,7 @@ const GetInvolved = () => {
 
       <p>This paid internship is available for ‘26s, ‘27s, and ‘28s and will allow selected students to actively use the skills
         they gained through Peer Support training. For more information, please reach out to us at mhu@dartmouth.edu or
-        to our peer support student directors: </p>
+        to our Peer Support student directors: </p>
 
       <p>
         <li> Chelsea Mills chelsea.k.mills.26@dartmouth.edu</li>
