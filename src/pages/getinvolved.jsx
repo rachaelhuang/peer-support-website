@@ -1,7 +1,9 @@
 import React from "react";
+import Layout from "../layouts/Layout";
 
 const GetInvolved = () => {
   return (
+    <Layout>
     <div>
       <h1>Get Involved</h1>
       <p>Over the past few terms, we’ve been collaborating with staff at the SWC to improve the current Peer Support model.
@@ -17,8 +19,8 @@ const GetInvolved = () => {
         <li>Sreeya Pittala sreeya.pittala.26@dartmouth.edu</li>
         <li>Melissa Gonzalez melissa.gonzalez.25@dartmouth.edu</li>
       </p>
-
     </div>
+    </Layout>
   );
 };
 
