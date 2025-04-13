@@ -13,6 +13,7 @@
     "react": "^19.0.0",
     "react-chatbot-kit": "^2.2.2",
     "react-dom": "^19.0.0",
+    "react-router": "^7.5.0",
     "react-router-dom": "^7.1.5"
   },
   "devDependencies": {

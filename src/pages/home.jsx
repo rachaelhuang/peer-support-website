@@ -1,10 +1,8 @@
 import React from "react";
-import Layout from "../layouts/Layout";
 
 
 const Home = () => {
   return (
-    <Layout>
     <div>
       <div className="main-content">
         <h1>Dartmouth Peer Support</h1>
@@ -12,7 +10,7 @@ const Home = () => {
       
         </div>
     </div>
-    </Layout>
+
   );
 };
 
