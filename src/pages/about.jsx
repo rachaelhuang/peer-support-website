@@ -1,9 +1,8 @@
 import React from "react";
-import Layout from "../layouts/Layout";
+
 
 const About = () => {
   return (
-    <Layout>
       <div>
         <h1>About Us</h1>
         <p>Peer Support Student Directors</p>
@@ -20,7 +19,6 @@ const About = () => {
           <li>x</li>
           <li>x</li>
       </div>
-    </Layout>
   );
 };
 
