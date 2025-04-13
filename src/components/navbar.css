@@ -2,32 +2,97 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;  
+    padding: 1rem 2rem;
+    background-color: #121212;
     width: 100%;
-    padding: 0.25rem 2rem;
-    background-color: #25252D;
-    color: white;
-    border-bottom: 1px solid #464652;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .nav-links {
-    list-style: none;
+}
+
+/* Logo container with pseudo-element to mask the border */
+.logo-container {
     display: flex;
-    gap: 1rem;
-  }
-  
-  .nav-links a {
-    color: white;
+    align-items: center;
     text-decoration: none;
-  }
-  
-  .nav-links a:hover {
-    color: #f0a500;
-  }
+    position: relative;
+    overflow: visible;
+}
+
+.logo-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background-color: #121212;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.logo-inner-container {
+    position: relative;
+    z-index: 2;
+}
+
+.logo-img {
+    height: 130px;
+    width: auto;
+    transition: transform 0.3s ease;
+    border: none !important;
+    position: relative;
+    z-index: 2;
+    display: block;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.nav-links a:hover {
+    color: #50C878;
+}
+
+.nav-links a.active {
+    color: #50C878;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .logo-container {
+        margin-bottom: 0.5rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+}
