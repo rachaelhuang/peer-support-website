@@ -1,8 +1,170 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #121212;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fix for NavLink active styles */
+.nav-links a.active,
+.nav-links a:active,
+.nav-links a:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  background: none !important;
+}
+
+/* Remove green border from logo */
+.logo-container,
+.logo-img,
+.logo-container:focus,
+.logo-container:active,
+a:has(> .logo-img) {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  background: none !important;
+}
+
 #root {
-  max-width: 1280px;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #121212;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Remove focus outline for all links in nav */
+.nav-links a:focus 
+ {
+  outline: none;
+}
+
+/* Common page container styles */
+.page-container {
+  width: 100%;
+  background-color: #121212;
+  color: white;
+  padding: 2rem 0;
+}
+
+.page-content {
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.page-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #50C878;
+  position: relative;
+  display: inline-block;
+}
+
+.page-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: #50C878;
+}
+
+.page-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Accessibility focus styles */
+:focus:not(.logo-container):not(.logo-img):not([class*="logo"]) {
+  outline: 2px solid #50C878;
+  outline-offset: 2px;
+}
+
+/* Prevent overflow issues */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Common card styles */
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
   padding: 2rem;
-  text-align: left;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  background-color: #50C878;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #45b269;
+}
+
+.btn:active {
+  transform: translateY(2px);
 }
 
 .logo {
@@ -16,10 +178,6 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-.card {
-  padding: 2em;
 }
 
 .read-the-docs {

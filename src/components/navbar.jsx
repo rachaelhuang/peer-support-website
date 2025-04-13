@@ -1,15 +1,22 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
+import peerSupportLogo from "../assets/peer-support-logo.png";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      {/* <h1 className="logo">Dartmouth Peer Support</h1> */}
+      <Link to="/" className="logo-container" tabIndex="-1">
+        <img 
+          src={peerSupportLogo} 
+          alt="Peer Support Logo" 
+          className="logo-img"
+        />
+      </Link>
+      
       <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/getinvolved">Get Involved</Link></li>
-        <li><Link to="/mentalhealthresources">Mental Health Resources</Link></li>
+        <li><NavLink to="/mentalhealthresources" style={({isActive}) => isActive ? {color: '#50C878'} : {}}>Resources</NavLink></li>
+        <li><NavLink to="/testimonials" style={({isActive}) => isActive ? {color: '#50C878'} : {}}>Testimonials</NavLink></li>
+        <li><NavLink to="/getinvolved" style={({isActive}) => isActive ? {color: '#50C878'} : {}}>Get Involved</NavLink></li>
       </ul>
     </nav>
   );
