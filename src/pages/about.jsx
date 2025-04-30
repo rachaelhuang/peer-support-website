@@ -63,7 +63,7 @@ const About = () => {
           <h2 className="section-heading">Join Our Team</h2>
           <p className="section-text">
             Interested in becoming a Peer Supporter? We&rsquo;re always looking for compassionate 
-            students who want to make a difference in our campus community.
+            students who want to make a difference in our campus community. Check back for updates in a few months!
           </p>
           <Link to="/getinvolved" className="btn">Get Involved</Link>
         </div>

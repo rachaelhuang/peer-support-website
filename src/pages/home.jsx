@@ -35,12 +35,12 @@ const Home = () => {
 
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
-                <label htmlFor="email" className="form-label">Your Dartmouth Email</label>
+                <label htmlFor="email" className="form-label">Your Net ID Dartmouth Email</label>
                 <input
                   type="email"
                   id="email"
                   className="form-control"
-                  placeholder="Your@dartmouth.edu"
+                  placeholder="YourNetID@dartmouth.edu"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
