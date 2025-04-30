@@ -5,7 +5,6 @@ import Home from "./pages/home.jsx";
 import About from "./pages/about.jsx";
 import GetInvolved from "./pages/getinvolved.jsx";
 import MentalHealthResources from './pages/mentalhealthresources.jsx';
-import Testimonials from './pages/testimonials.jsx';
 import NotFound from './pages/notfound.jsx';
 import './App.css';
 
